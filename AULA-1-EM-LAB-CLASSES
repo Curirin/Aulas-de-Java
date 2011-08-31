@@ -1,0 +1,23 @@
+//Resolução de exercício proposto
+import javax.swing.*;
+public class Calcular
+{
+	publi static void main(String args[])
+	{
+		int d;
+		double y;
+		
+		JOptionPane.showMessageDialog(null,"Programa complementação de exercicio da aula de 19.08.2011");
+		String r=JOptionPane.showInputDialog("Digite o limite da equação");
+		int z=Integer.parseInt(r);
+		
+		if(z<=0)
+			JOptionPane.showMessageDialog(null,"Valor Limite Inválido!!!!");
+		else
+		{
+			for(d=1,y=0;d<=z,d++)
+				y=y+(double)1/d;
+				JOptionPane.showMessageDialog(null,"O Resultado da Equação é: "+y);
+		}
+	}
+}	
