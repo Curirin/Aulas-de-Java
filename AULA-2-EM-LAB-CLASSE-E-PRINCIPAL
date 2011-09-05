@@ -1,0 +1,50 @@
+import javax.swing.*;
+public class Aluno
+{
+	String nome;
+	double av1,av2,av3;
+	public double media()
+	{
+		double m;
+		m=(av1+av2+av3)/3;
+		return m;
+	}
+	public String getAluno()
+	{
+		return(nome+"\n"+av1+"\n"+av1+"\n"+av2+"\n"+av3);
+	}
+}
+
+//--------------------------------------------------------------------
+
+import javax.swing.*;
+public class Principal
+{
+			public static void main(String args[])
+		{
+			Aluno a=new Aluno();//declaração e instanciação(metodo construtor);
+			JOptionPane.showMessageDialog(null,"Escreva as informações");
+			a.nome=JOptionPane.showInputDialog("Digite o Nome do Aluno");
+			a.av1=Double.parseDouble(JOptionPane.showInputDialog(a.av1));
+			JOptionPane.showMessageDialog(null,"Nota Digitada"+a.av1);
+			a.av2=Double.parseDouble(JOptionPane.showInputDialog(a.av2));
+			JOptionPane.showMessageDialog(null,"Nota Digitada"+a.av2);
+			a.av3=Double.parseDouble(JOptionPane.showInputDialog(a.av3));
+			JOptionPane.showMessageDialog(null,"Nota Digitada"+a.av3);
+			
+			System.out.println(a.nome);
+			System.out.println(a.av1);
+			System.out.println(a.av2);
+			System.out.println(a.av3);
+			JOptionPane.showMessageDialog(null,"Aluno: "+a.getAluno()+"\n"+"Média: "+a.media());
+			
+			if(a.media()>=6)
+				JOptionPane.showMessageDialog(null,"Aluno Aprovado!!!!!");
+			else
+			{
+				JOptionPane.showMessageDialog(null,"Aluno Reprovado!");
+			}
+		
+		//System.out.println(a.x)
+		}
+}
